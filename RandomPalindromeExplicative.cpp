@@ -83,28 +83,28 @@ bool Palindrome(int Array[], int m, int n){       //this Palindrome function wil
 //This is the "main" problem function that call the two functions above. 
 
 void Random_Palindrome(int N){
-    limit(N,0,9);                                                               //Setting the limit of the function. limit(input of the amount N of digits of the random number, minimal end, maximal end).
-    srand(static_cast<unsigned int>(time(0)));                                  //Generate a seed "using the computer time as the seed of the random number generator".
-    int numbers_holders[N-1];                                                   //Initializing the array that will hold each randoms numbers digits generated.
-    cout << "The concatenation of the 6 randomly generated numbers is: ";       //Like in the example.
-    for(int i=0; i<=(N-1); i++){                                                //Arrays include 0, so N-1 is the last cell of the array.
+    limit(N,0,9);                                                               	//Setting the limit of the function. limit(input of the amount N of digits of the random number, minimal end, maximal end).
+    srand(static_cast<unsigned int>(time(0)));                                  	//Generate a seed "using the computer time as the seed of the random number generator".
+    int numbers_holders[N-1];                                                   	//Initializing the array that will hold each randoms numbers digits generated.
+    cout << "The concatenation of the " << N << " randomly generated numbers is: ";     //Like in the example.
+    for(int i=0; i<=(N-1); i++){                                                	//Arrays include 0, so N-1 is the last cell of the array.
         
-        int Gen = rand();                                                       /*I have initialize "Gen" to a rand() generator in the "for loop", so it generated ever time the loop is looping. 
-                                                                                  The following is a hypothesis:
-                                                                                  And, by doing this, you avoid generating a other random number during the loop every time you need to use a rand(),
-                                                                                  in other word, it reduce the variation of probability and make the probability more accurate.*/
+        int Gen = rand();                                                       	/*I have initialize "Gen" to a rand() generator in the "for loop", so it generated ever time the loop is looping. 
+                                                                                  	  The following is a hypothesis:
+                                                                                  	  And, by doing this, you avoid generating a other random number during the loop every time you need to use a rand(),
+                                                                                  	  in other word, it reduce the variation of probability and make the probability more accurate.*/
 
-        if(Gen%100 < 80){                                                       /*This make "The probability that a generated digit is even is 80% 
-                                                                                  whereas the probability that a generated digit is odd is 20%".*/
-            numbers_holders[i] = 2*Gen % 10;                                    //By definition, 2n is the equation of evens numbers.
+        if(Gen%100 < 80){                                                       	/*This make "The probability that a generated digit is even is 80% 
+                                                                                  	  whereas the probability that a generated digit is odd is 20%".*/
+            numbers_holders[i] = 2*Gen % 10;                                    	//By definition, 2n is the equation of evens numbers.
         } else {
-            numbers_holders[i] = (2*Gen % 10)+1;                                //By definition, 2n+1 is the equation of odds numbers.
+            numbers_holders[i] = (2*Gen % 10)+1;                                	//By definition, 2n+1 is the equation of odds numbers.
         }
-        cout << numbers_holders[i];                                             //"The concatenation of the "N" randomly generated numbers is: "(The Number Of N Digits Generated)""
+        cout << numbers_holders[i];                                             	//"The concatenation of the "N" randomly generated numbers is: "(The Number Of N Digits Generated)""
     }
     cout << endl;
     
-    if(Palindrome(numbers_holders,0,(N-1)) == true){                            //If the Palindrome function return true, then the random number generated is a palindrome, else, its not.
+    if(Palindrome(numbers_holders,0,(N-1)) == true){                            	//If the Palindrome function return true, then the random number generated is a palindrome, else, its not.
         cout << "The number is a palindrome!" << endl;
     } else {
         cout << "The number is NOT a palindrome!" << endl;
