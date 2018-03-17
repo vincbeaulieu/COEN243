@@ -5,7 +5,7 @@ This is one of my Assignment problem that was due on 13 March, 2018 for my COEN2
 I coded this has an example of how to code and solve this kind of problem,
 not to copy-paste in any due work, assignment...
 I'm not responsable of any plagiarisme.
-This code is not perfect, if ther is error or bug, feel free to notice me.
+This code is not perfect, if there are any errors or bugs, feel free to notice me.
 
 Below, you'll find the question.
 
