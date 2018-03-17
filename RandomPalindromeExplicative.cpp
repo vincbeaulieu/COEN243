@@ -42,12 +42,12 @@ void Random_Palindrome(int);
 
 int main() {
     int exit_key = 0;
-    while(exit_key != -1){                                                                              //I have create a loop to facilitate debugging.
-		cout << "Try to generate a palindrome! \nPlease enter the length of a number (between 0 and 9): ";  //I have accommodate the sentence of the problem example to make it more user-friendly.
-		int N;                                                                                              //Initializing the amount of digits should contain the number.
+    while(exit_key != -1){                                                                              		//I have create a loop to facilitate debugging.
+		cout << "Try to generate a palindrome! \nPlease enter the length of a number (between 0 and 9): ";  	//I have accommodate the sentence of the problem example to make it more user-friendly.
+		int N;                                                                                              	//Initializing the amount of digits should contain the number.
 		cin >> N;
 		Random_Palindrome(N);
-		cout << "enter any number except -1 to try again, else to quit" << endl;                            //Request to close the debugging loop.
+		cout << "enter any number except -1 to try again, else to quit" << endl;                            	//Request to close the debugging loop.
 		cin >> exit_key;
     }
 }
