@@ -100,7 +100,7 @@ void Random_Palindrome(int N){
         } else {
             numbers_holders[i] = (2*Gen % 10)+1;                                //By definition, 2n+1 is the equation of odds numbers.
         }
-        cout << numbers_holders[i];                                             //"The concatenation of the 6 randomly generated numbers is: (The Number Of N Digits Generated)"
+        cout << numbers_holders[i];                                             //"The concatenation of the "N" randomly generated numbers is: "(The Number Of N Digits Generated)""
     }
     cout << endl;
     
