@@ -33,7 +33,7 @@ The number is NOT a palindrome!
 using namespace std;
 
 
-//Here is the prototypes of the function I have created for this problem.
+//Here is the prototypes of the functions I have created for this problem.
 
 void limit(int,int,int);
 bool Palindrome(int,int,int);
